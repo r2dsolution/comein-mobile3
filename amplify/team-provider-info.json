@@ -1,0 +1,21 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-comeinmobile2-staging-153547-authRole",
+      "UnauthRoleArn": "arn:aws:iam::091340909384:role/amplify-comeinmobile2-staging-153547-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::091340909384:role/amplify-comeinmobile2-staging-153547-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-comeinmobile2-staging-153547-deployment",
+      "UnauthRoleName": "amplify-comeinmobile2-staging-153547-unauthRole",
+      "StackName": "amplify-comeinmobile2-staging-153547",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:091340909384:stack/amplify-comeinmobile2-staging-153547/4749baf0-14d4-11ed-8fd6-0a5360ea6d7a",
+      "AmplifyAppId": "d3dbnrwhjtetnw",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-comeinmobile2-staging-153547-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "comeinmobile2": {}
+      }
+    }
+  }
+}

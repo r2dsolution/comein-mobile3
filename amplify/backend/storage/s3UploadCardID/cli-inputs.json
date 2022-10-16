@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3UploadCardID",
+  "policyUUID": "fad38b70",
+  "bucketName": "comeinmobile20a1094e1e6744a209eef9e666e5b83bf",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

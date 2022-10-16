@@ -1,0 +1,79 @@
+{
+
+    "next":"Next",
+    "ok":"OK",
+    "save":"Save",
+    "back":"Back",
+    "cancel":"Cancel",
+    "save_success":"Success",
+    "username": "Username",
+    "username_text":"Complete your username & password",
+    "username_existing":"email already exists.",
+    "login_text1":"Sign in with your email and password \n or continue with social media",
+    "login_fail_wrong_username_password":"Incorrect username or password.",
+    "email": "Email",
+    "email_hint":"Enter your email",
+    "email_required":"Please enter your email",
+    "email_invalid":"Invalid your email",
+    "password": "Password",
+    "password_hint":"Enter your password",
+    "new_password": "New Password",
+    "new_password_hint":"Enter your new password",
+    "password_required":"Please enter your password",
+    "password_min_length":"your password less than 8 char",
+    "password_not_match":"Passwords don't match",
+    "confirm_password":"Confirm Password",
+    "confirm_password_hint":"Re-enter your password",
+    "confirm_password_required":"Please Re-enter your password",
+    "remember_me":"Remember Me",
+    "forgot_password":"Forgot Password",
+    "forgot_password_text":"Please enter your email and new password.\nWe will send you OTP to reset your account",
+ 
+    "no_account_text":"Don’t have an account? ",
+    "sign_up":"Sign Up",
+
+    "agreement":"Agreement",
+    "i_accept":"I Accept",
+
+    "user_profile":"User Profile",
+    "user_profile_text":"Complete your details",
+    "first_name":"First Name",
+    "first_name_hint":"Enter your first name",
+    "first_name_required":"Please enter your firstame",
+    "last_name":"Last Name",
+    "last_name_hint":"Enter your last name",
+    "last_name_required":"Please enter your lastname",
+    "ref_name":"Name",
+    "ref_name_hint":"Enter your name",
+    "ref_name_required":"Please enter your name",
+    "phone_number":"Phone Number",
+    "phone_number_hint":"Enter your phone number",
+    "phone_number_required":"Please enter your phone number",
+    "phone_number_invalid":"Please Enter Valid phone number",
+
+    "otp_verification":"OTP Verification",
+    "otp_text":"We sent your code to your email",
+    "otp_expire_text":"This code will expired in ",
+    "otp_resend":"Resend OTP Code",
+    "otp_minute":"Minutes",
+    "otp_exceeded_limit":"Attempt limit exceeded, please try after some time.",
+    "otp_incorrect":"Invalid verification code provided, please try again.",
+
+    "my_profile":"My Profile",
+    "profile_change_password":"Change Password",
+    "profile_confirm_change_password":"Confirm Change Password",
+    "profile_confirm_change":"Are you sure ?",
+    "profile_edit":"Edit Profile",
+
+    "logout":"Logout",
+    "logout_confirm":"Logout ?",
+
+    "server_error_authen":"Unexpected error: user to sign in."
+
+   
+
+
+
+
+
+}
