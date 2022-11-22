@@ -13,4 +13,11 @@ final RegExp emailValidatorRegExp =
 
 final RegExp phoneValidatorRegExp = RegExp(r"^[0-9]{10}$");
 
-enum MenuState { home, hotelBooking, tourBooking, favourite, message, profile }
+enum MenuState {
+  home,
+  hotelBooking,
+  tourBooking,
+  favourite,
+  activities,
+  profile
+}

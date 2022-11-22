@@ -267,7 +267,8 @@ class _HotelBookingUserScreenState
 
   Future<List<HotelBooking>> doListHotelBooking() async {
     onLoading(true);
-    String jsonStr = await ComeInAPI.post('/hotel-bookings', '{}');
+    String endpoint = '/hotel-bookings';
+    String jsonStr = await ComeInAPI.post(endpoint, '{}');
     print('json->: ${jsonStr}');
     Map<String, dynamic> json = jsonDecode(jsonStr);
     Map<String, dynamic> resultMap = {};
@@ -301,16 +302,21 @@ class _HotelBookingUserScreenState
     String jsonStr = await ComeInAPI.post('/hotel-bookings/notify', '{}');
     print('json->: ${jsonStr}');
     Map<String, dynamic> jsonMap = jsonDecode(jsonStr);
-    Map<String, dynamic> resultMap = jsonMap['result'];
-
-    List list = resultMap['hotel-booking'] as List;
-    // List<HotelBooking> results = List.from(list);
-
-    List<HotelBooking> dataList =
-        list.map((json) => HotelBooking.fromJson(json)).toList();
-    print('notify-size: ${dataList.length}');
+    if (jsonMap.containsKey('result')) {
+      Map<String, dynamic> resultMap = jsonMap['result'];
+      if (resultMap.containsKey('hotel-booking')) {
+        List list = resultMap['hotel-booking'] as List;
+        List<HotelBooking> dataList =
+            list.map((json) => HotelBooking.fromJson(json)).toList();
+        print('notify-size: ${dataList.length}');
+        onLoading(false);
+        return dataList;
+      }
+    }
     onLoading(false);
-    return dataList;
+    return [];
+
+    // List<HotelBooking> results = List.from(list);
   }
 
   @override

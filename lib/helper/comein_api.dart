@@ -54,7 +54,7 @@ class ComeInAPI {
       List<int> data = utf8.encode(content);
       print('post-content..by UTF-8');
       RestOptions options = RestOptions(
-          apiName: 'comein-mobile-api',
+          apiName: 'MyRestAPI',
           path: restURL,
           body: Uint8List.fromList(data),
           queryParameters: params,
@@ -65,12 +65,13 @@ class ComeInAPI {
       RestResponse response = await restOperation.response;
 
       String result = utf8.decode(response.data);
-      print('JSON response by UTF-8: ${result}');
+      print('endpoint: ${restURL} -> response by UTF-8: ${result}');
       return result;
     } on ApiException catch (e) {
       String error = e.message;
-      print('POST call failed: ${error}');
-      return error;
+      print('POST call URL: ${restURL} -> failed: ${error}');
+      String jsonError = '{"error":"${error}"}';
+      return jsonError;
     }
   }
 

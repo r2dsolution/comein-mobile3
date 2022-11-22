@@ -107,14 +107,17 @@ class _DetailHotelBookingNavScreen
       String jsonStr = await ComeInAPI.postQuery(url, '{}', params);
       print('json->: ${jsonStr}');
       Map<String, dynamic> jsonMap = jsonDecode(jsonStr);
-      dynamic json = jsonMap['result'];
-      HotelBooking _bookInfo = HotelBooking.fromJson(json);
-      print('customer: ${_bookInfo.customer}');
-      setState(() {
-        bookInfo = _bookInfo;
-      });
+      if (jsonMap.containsKey('result')) {
+        dynamic json = jsonMap['result'];
+        HotelBooking _bookInfo = HotelBooking.fromJson(json);
+        print('customer: ${_bookInfo.customer}');
+        setState(() {
+          bookInfo = _bookInfo;
+        });
+        return _bookInfo;
+      }
 
-      return _bookInfo;
+      return null;
     }
 
     //}

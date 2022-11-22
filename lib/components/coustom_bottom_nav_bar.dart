@@ -55,9 +55,18 @@ class CustomBottomNavBar extends StatelessWidget {
                 onPressed: () =>
                     Navigator.pushNamed(context, ROUTE_NAME_TOUR_BOOKING),
               ),
+
+              // IconButton(
+              //   icon: SvgPicture.asset("assets/icons/Chat.svg"),
+              //   onPressed: () {},
+              // ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Chat.svg"),
-                onPressed: () {},
+                icon: SvgPicture.asset("assets/icons/Chat.svg",
+                    color: MenuState.activities == selectedMenu
+                        ? activeIconColor
+                        : inActiveIconColor),
+                onPressed: () =>
+                    Navigator.pushNamed(context, ROUTE_NAME_ACTIVITIES_BOARD),
               ),
               IconButton(
                 icon: SvgPicture.asset(

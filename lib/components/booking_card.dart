@@ -358,10 +358,8 @@ class BookingCard extends StatelessWidget {
 
   List<Widget> buildAction(String target) {
     return [
-      FlatButton(
-        padding: EdgeInsets.zero,
-        // color: Colors.red,
-        minWidth: 25,
+      TextButton(
+        style: TextButton.styleFrom(padding: EdgeInsets.zero),
         child: Column(children: [
           FaIcon(
             FontAwesomeIcons.infoCircle,
@@ -380,25 +378,44 @@ class BookingCard extends StatelessWidget {
         // },
         onPressed: onDetailEvent,
       ),
-      FlatButton(
-        padding: EdgeInsets.zero,
-        // color: Colors.red,
-        minWidth: 25,
-        child: Column(children: [
-          FaIcon(
-            FontAwesomeIcons.shareAltSquare,
-            color: (target == '') ? Colors.blue : Colors.grey,
-            size: 16,
-          ),
-          Text("share"),
-        ]),
-        //onPressed: () {
-        // Navigator.pushNamed(
-        //     context, Hotel1BookingScreen.routeName,
-        //     arguments: {"booking_no": "CI8398"});
-        //},
-        onPressed: (target == '') ? onShareEvent : null,
-      ),
+      (hotel != null)
+          ? TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              child: Column(children: [
+                FaIcon(
+                  FontAwesomeIcons.shareAltSquare,
+                  color: (target == '') ? Colors.blue : Colors.grey,
+                  size: 16,
+                ),
+                Text("share"),
+              ]),
+              //onPressed: () {
+              // Navigator.pushNamed(
+              //     context, Hotel1BookingScreen.routeName,
+              //     arguments: {"booking_no": "CI8398"});
+              //},
+              onPressed: (target == '') ? onShareEvent : null,
+            )
+          : Text("-"),
+      (tour != null)
+          ? TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              child: Column(children: [
+                FaIcon(
+                  FontAwesomeIcons.cartShopping,
+                  color: (target == '') ? Colors.blue : Colors.grey,
+                  size: 16,
+                ),
+                Text("Payment"),
+              ]),
+              //onPressed: () {
+              // Navigator.pushNamed(
+              //     context, Hotel1BookingScreen.routeName,
+              //     arguments: {"booking_no": "CI8398"});
+              //},
+              onPressed: (target == '') ? onShareEvent : null,
+            )
+          : Text("-"),
     ];
   }
 
@@ -466,10 +483,12 @@ class BookingCard extends StatelessWidget {
                   hotel: hotel!,
                   height: MediaQuery.of(context).size.height * 0.2,
                   width: MediaQuery.of(context).size.width * 0.7)
-              : TourImage(
+              : TourAssetImage(
                   tour: tour,
                   height: MediaQuery.of(context).size.height * 0.2,
-                  width: MediaQuery.of(context).size.width * 0.7),
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  assetImage: 'assets/images/tour01.png',
+                ),
         ),
         Row(
             mainAxisAlignment: MainAxisAlignment.start,

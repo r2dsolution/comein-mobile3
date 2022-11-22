@@ -5,6 +5,7 @@
 // import 'package:thecomein/screens/hotels/detail_hotel_booking_screen.dart';
 // import 'package:thecomein/screens/hotels/forward_hotel_booking.dart';
 import 'package:thecomein/components/card_id_overlay.dart';
+import 'package:thecomein/screens/activities_main_screen.dart';
 import 'package:thecomein/screens/booking_main_screen.dart';
 import 'package:thecomein/screens/forgot_password/forgot_password_otp_screen.dart';
 import 'package:thecomein/screens/forgot_password/forgot_password_screen.dart';
@@ -28,6 +29,7 @@ import 'package:thecomein/screens/signup/profile_screen.dart';
 import 'package:thecomein/screens/signup/otp_screen.dart';
 import 'package:thecomein/screens/signup/account_screen.dart';
 import 'package:thecomein/screens/signup/term_agreement_screen.dart';
+import 'package:thecomein/screens/tour_main_screen.dart';
 // import 'package:thecomein/screens/tour_booking_screen.dart';
 // import 'package:thecomein/screens/tours/detail_tour_screen.dart';
 
@@ -38,7 +40,7 @@ final Map<String, WidgetBuilder> routes = {
   ROUTE_NAME_SIGNIN: (context) => const SignInScreen(),
   ROUTE_NAME_LUNCHING_PAGE: (context) => const LunchingPageScreen(),
   ROUTE_NAME_MAIN_BOOKING: (context) => const MainBookingScreen(),
-  // ROUTE_NAME_TOUR_BOOKING: (context) => const TourBookingScreen(),
+  ROUTE_NAME_TOUR_BOOKING: (context) => const TourMainScreen(),
   ROUTE_NAME_FORWARD_HOTEL_BOOKING: (context) =>
       const ForwardHotelBookingScreen(),
   ROUTE_NAME_DETAIL_HOTEL_BOOKING: (context) =>
@@ -61,6 +63,8 @@ final Map<String, WidgetBuilder> routes = {
 
   ROUTE_NAME_PROFILE_VIEW: (context) => const ProfileScreen(),
   ROUTE_NAME_PROFILE_EDIT: (context) => const EditProfileScreen(),
+
+  ROUTE_NAME_ACTIVITIES_BOARD: (context) => const ActivitiesMainScreen(),
 
   // ROUTE_NAME_TOUR_DETAIL: (context) => const DetailTourScreen(),
 };
@@ -87,3 +91,5 @@ const String ROUTE_NAME_PASSWORD_FORGOT = '/password/forgot';
 const String ROUTE_NAME_PASSWORD_OTP = '/password/otp';
 const String ROUTE_NAME_PASSWORD_CHANGE = '/password/change';
 const String ROUTE_NAME_PASSWORD_CONFIRM_CHANGE = '/password/confirm_change';
+
+const String ROUTE_NAME_ACTIVITIES_BOARD = '/activities';

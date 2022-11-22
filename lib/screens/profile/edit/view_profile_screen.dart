@@ -93,12 +93,14 @@ class _ProfilePic extends State<ProfilePic> {
             child: SizedBox(
               height: 46,
               width: 46,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  side: BorderSide(color: Colors.white),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                    side: BorderSide(color: Colors.white),
+                  ),
+                  foregroundColor: Color(0xFFF5F6F9),
                 ),
-                color: Color(0xFFF5F6F9),
                 onPressed: () {
                   print('on press->');
                   loadFile();

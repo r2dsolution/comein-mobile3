@@ -51,6 +51,31 @@ class TourImage extends StatelessWidget {
   }
 }
 
+class TourAssetImage extends StatelessWidget {
+  final TourProfile? tour;
+  final String assetImage;
+  final double height;
+  final double width;
+
+  const TourAssetImage(
+      {Key? key,
+      required this.tour,
+      required this.assetImage,
+      required this.height,
+      required this.width})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(assetImage,
+        height: height, width: width, fit: BoxFit.cover);
+  }
+
+  noImage() {
+    return Image.asset('assets/images/noimage.jpeg',
+        height: height, width: width, fit: BoxFit.cover);
+  }
+}
+
 class ComeInImage {
   static hotelImage(HotelProfile? hotel, double height, double width) {
     if (hotel == null || hotel.assetImages == '') return noImage(height, width);
